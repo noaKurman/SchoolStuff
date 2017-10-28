@@ -15,9 +15,12 @@ public class GenThree {
         
         // Define random and generate three numbers in the range
         Random rand = new Random();
-        int firstRandom = rand.nextInt(max - min) + min;
-        int secondRandom = rand.nextInt(max - min) + min;
-        int thirdRandom = rand.nextInt(max - min) + min;
+        //int firstRandom = rand.nextInt(max - min) + min;
+        int firstRandom = (int) (Math.random()*(max - min)) + min;
+        int secondRandom = (int) (Math.random()*(max - min)) + min;
+        int thirdRandom = (int) (Math.random()*(max - min)) + min;
+        //int secondRandom = rand.nextInt(max - min) + min;
+        //int thirdRandom = rand.nextInt(max - min) + min;
         
         // Get the lowest number, first compare two first numbers and then the lowest vs. the third
         int lowest = Math.min(firstRandom, secondRandom);
