@@ -1,12 +1,12 @@
 /*
- * Assignment number : 1.2
- * File Name : AddTwo.java
+ * Assignment number : 1.4
+ * File Name : RandomWalker.java
  * Name (First Last) : Noa Kurman
  * Student ID : 204404305
  * Email : noa.kurman@post.idc.ac.il
  */
 
-// This class Get two numbers from user and add them
+// This class is giving the walker a random steps to take
 
 public class RandomWalker {
 

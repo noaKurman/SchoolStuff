@@ -1,12 +1,12 @@
 /*
- * Assignment number : 1.2
- * File Name : AddTwo.java
+ * Assignment number : 1.3
+ * File Name : DamkaBoard.java
  * Name (First Last) : Noa Kurman
  * Student ID : 204404305
  * Email : noa.kurman@post.idc.ac.il
  */
 
-// This class Get two numbers from user and add them
+// This class will create a damka baord from asstrikes
 
 public class DamkaBoard {
 

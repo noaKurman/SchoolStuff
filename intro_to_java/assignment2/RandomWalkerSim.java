@@ -29,9 +29,6 @@ public class RandomWalkerSim {
             double total = Math.abs(right) + Math.abs(left);
             double square = (int) Math.pow(total, 2);
             averageSquare = averageSquare + square;
-            System.out.println("total " + total);
-            System.out.println("square " + square);
-            System.out.println(averageSquare);
         }
         averageSquare = averageSquare / T;
         System.out.println("After " + T + " trials, the average squared distance of a robot that makes " + n + " random steps is " + averageSquare);

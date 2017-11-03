@@ -1,12 +1,12 @@
 /*
  * Assignment number : 1.2
- * File Name : AddTwo.java
+ * File Name : CalcPI.java
  * Name (First Last) : Noa Kurman
  * Student ID : 204404305
  * Email : noa.kurman@post.idc.ac.il
  */
 
-// This class Get two numbers from user and add them
+// This class Get will approximate the number pi the numbers of time you ask it to
 
 public class CalcPI {
 
