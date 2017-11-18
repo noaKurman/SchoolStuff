@@ -22,10 +22,10 @@ public class CalcExp {
         double ans = 1.0 + x;
         double powX = x;
         int factorial = 1;
-        for (int i=2; i<=N; i++) { 
-            factorial = factorial*i;  
-            powX = powX*x;
-            ans = ans + (powX/factorial);
+        for (int i = 2; i <= N; i++) { 
+            factorial = factorial * i;  
+            powX = powX * x;
+            ans = ans + (powX / factorial);
         }
         return ans;
     

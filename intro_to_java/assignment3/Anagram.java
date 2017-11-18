@@ -27,18 +27,13 @@ public class Anagram {
            }
 	       char[] array = new char[str1.length()];
 	       char[] array2 = new char[str2.length()];
-           int count=0;
-           for (int i=0; i<str1.length(); i++) {
-               char char1 = Character.toLowerCase(str1.charAt(i));
-               char char2 = Character.toLowerCase(str2.charAt(i));
-               if (isLetter(char1) && isLetter(char2)) {
-                   array[i] = char1;
-                   array2[i] = char2;
-               
-               }
+           int count = 0;
+           for (int i = 0; i < str1.length(); i++) {
+               array[i] = str1.charAt(i);
+               array2[i] = str2.charAt(i);
            }
-           for (int s=0; s<array.length; s++) { 
-               for (int t=0; t<array.length; t++) {
+           for (int s = 0; s < array.length; s++) { 
+               for (int t = 0; t < array.length; t++) {
                    if (array[s] == array2[t]) { 
                        count++;
                        array2[t] = 0;
@@ -62,9 +57,16 @@ public class Anagram {
            }
 	       char[] array = new char[str.length()];
            String str2 = "";
-           for (int i=0; i<str.length(); i++) {
+           char char1 = '\0';
+           for (int i = 0; i < str.length(); i++) {
                if (isLetter(str.charAt(i))) {
-                   str2 = str2 + Character.toLowerCase(str.charAt(i));
+                   if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
+                       char1 = (char) (str.charAt(i) + 32);
+                    }
+                   else {
+                       char1 = str.charAt(i);
+                   }
+                    str2 = str2 + char1;
                } 
            }
 	       return str2;
@@ -101,7 +103,7 @@ public class Anagram {
        // Returns true if the given character is an English letter ('a' to 'z' or 'A' to 'Z'), false otherwise.
        private static boolean isLetter(char c) {
            // Replace the following statement with your code.
-           if ((c>='A' && c<='Z') || (c>='a' && c<='z')) {
+           if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
                return true;
            }
            return false;
