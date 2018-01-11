@@ -1,3 +1,10 @@
+/*
+ * Assignment number : 4.1
+ * File Name : Myarrays.java
+ * Name (First Last) : Noa Kurman
+ * Student ID : 204404305
+ * Email : noa.kurman@post.idc.ac.il
+ */
 public class MyArrays {
 	
 	public static void main(String []args) {

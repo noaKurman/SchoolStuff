@@ -1,4 +1,10 @@
-
+/*
+ * Assignment number : 4.2
+ * File Name : VectorSimilarity.java
+ * Name (First Last) : Noa Kurman
+ * Student ID : 204404305
+ * Email : noa.kurman@post.idc.ac.il
+ */
 public class VectorSimilarity {
 
 	public static void main(String []args) {

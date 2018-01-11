@@ -1,4 +1,11 @@
-public class wordSearch {
+/*
+ * Assignment number : 4.3
+ * File Name : WordSearch.java
+ * Name (First Last) : Noa Kurman
+ * Student ID : 204404305
+ * Email : noa.kurman@post.idc.ac.il
+ */
+public class WordSearch {
     public static void main(String []args) {
        test(); 
     }
@@ -7,12 +14,24 @@ public class wordSearch {
         char[][] array = {{'a', 'c', 'n'},
                           {'d', 'b', 'o'},
                           {'q', 'h', 'a'}};
+        // Test all the possible scenarios for the function
         String str = "noa";
-        String str2 = "bla";
+        String str2 = "bhn";
         String str3 = "acn";
+        String str4 = "do";
+        String str5 = "not";
+        String str6 = "nca";
+        String str7 = "ac";
+        String str8 = "cn";
+
         System.out.println(hasWord(array, str)); //should return true
-        System.out.println(hasWord(array, str2)); // should reurn true
-        System.out.println(hasWord(array, str3)); // should return false
+        System.out.println(hasWord(array, str7)); // should return true
+        System.out.println(hasWord(array, str8)); // should return true
+        System.out.println(hasWord(array, str3)); // should return true
+        System.out.println(hasWord(array, str4)); // should return false
+        System.out.println(hasWord(array, str2)); // should return false
+        System.out.println(hasWord(array, str5)); // should return false
+        System.out.println(hasWord(array, str6)); // should return false
         
     }
     
@@ -29,22 +48,29 @@ public class wordSearch {
         for (int i = 0; i < board[0].length; i++) {
                 countVertical = 0;
             for (int j = 0; j < board[1].length; j++)
-                if (word.charAt(j) == board[i][j]) {
+                if (word.charAt(countVertical) == board[i][j]) {
                     countVertical++;
+                    if (word.length() == countVertical) {
+                        return true;
+                    }
                 }
-            if (word.length() == countVertical) {
-                break;
-            }
+                else {
+                    countVertical = 0;
+                }
         }
         // Search for the work horizontally
         for (int i = 0; i < board[1].length; i++) {
                 countHorizontal = 0;
-            for (int j = 0; j < board[0].length; j++)
-                if (word.charAt(j) == board[j][i]) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (word.charAt(countHorizontal) == board[j][i]) {
                     countHorizontal++;
+                    if (word.length() == countHorizontal) {
+                        return true;
+                    }
                 }
-            if (word.length() == countHorizontal) {
-                break;
+                else {
+                    countHorizontal = 0;
+                }
             }
         }
         if (word.length() == countVertical || word.length() == countHorizontal) {
